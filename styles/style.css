@@ -1,0 +1,42 @@
+body{
+    background-color: #FEC7D7;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.content-waiting{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+}
+.img-animals-waiting{
+    position: static;
+    width: 327px;
+    height: 327px;
+    left: 0px;
+    top: 0px;
+}
+.tittle-waiting{
+    width: 327px;
+    text-align: center;
+}
+.text-waiting{
+    width: 327px;
+    text-align: center;
+}
+.btn-next-waiting{
+    height: 16px;
+    width: 295px;
+    left: 16px;
+    top: 16px;
+    background-color: #0E172C;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    color: #FFFFFE;
+    border-radius: 20px;
+}

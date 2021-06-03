@@ -1,0 +1,31 @@
+body, .container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEC7D7;
+}
+
+.content-img{
+  width: 327px;
+  min-height: 150px;
+}
+#img-animation{
+    animation-duration: 5s;
+    animation-name: img;
+    display: block;
+    margin: auto;
+}
+#text-cargar{
+  color: #0E172C;
+}
+@keyframes img {
+    from {
+        width: 31px;
+      }
+    
+      to {
+        width: 155px;
+      }
+}
