@@ -1,0 +1,31 @@
+*{
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    background: #FEC7D7;
+
+}
+#fixed{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: cadetblue;
+    position: fixed;
+    bottom: 0;
+    width: 375px;
+    height: 50px;
+}
+
+.contact{
+    position: relative;
+}
+
+.container{
+    position: relative;
+    width: 375px;
+    min-height: 100vh;
+    margin: auto;
+
+    background-color: azure;
+}

@@ -8,7 +8,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
 }
 .content-waiting{
     display: flex;
@@ -22,12 +21,19 @@ body{
     height: 327px;
     left: 0px;
     top: 0px;
+    margin-top: 40px;
 }
 .tittle-waiting{
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
     width: 327px;
     text-align: center;
 }
 .text-waiting{
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
     width: 327px;
     text-align: center;
 }
