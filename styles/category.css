@@ -45,7 +45,7 @@ body{
     flex-flow: wrap row;
     justify-content: space-evenly;
 }
-#perro{
+.perro{
     display: flex;
     flex-flow: row wrap;
     width: 156px;
@@ -120,4 +120,7 @@ body{
 }
 .color{
     color: aqua;
+}
+.ocultar{
+    background-color: black;
 }
