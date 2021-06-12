@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,36 +8,39 @@
     <link rel="stylesheet" href="./styles/normalize.css">
     <!--Css-->
     <link rel="stylesheet" href="./styles/category.css">
+    <!--Tipografia-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <title>Categoria</title>
 </head>
 <body>
     <div class="container">
+        <nav id="fixed">
+            <a href="category.html" class="activo"><img src="./img/Vectora.png" class="activoImg" alt="">Home</a>
+            <a href="message.html"><img src="./img/Vector1i.png" alt=""></a>
+            <a href="favorite.html"><img src="./img/Vector2i.png" alt=""></a>
+            <a href="profile.html"><img src="./img/Vector3i.png" alt=""></a>
+        </nav>
         <div class="content">
-            <nav id="fixed">
-                <i><img src="./img/Vector.png" alt=""></i>
-                <i><img src="./img/Vector (1).png" alt=""></i>
-                <i><img src="./img/Vector (2).png" alt=""></i>
-                <i class="contact"><img src="./img/Vector (3).png" alt=""></i>
-                <i><img src="./img/Vector (4).png" alt=""></i>
 
-            </nav>
-            <div>
-                <h2>Adopta una adorable mascota</h2>
-            </div>
-            <div>
-                <p>Categorías de mascotas</p>
-                <div>
-                    <img src="./img/perros.png" alt="">
+            <h2 id="title">Adopta una adorable mascota</h2>
+            <p id="description">Categorías de mascotas</p>
+            <div id="categoria">
+                <div id="perro">
+                    <img class="circle" src="./img/perros.png" alt="">
                     <p>Perros</p>
                 </div>
-                <div>
-                    <img src="./img/gatos.png" alt="">
+                <div id="gato">
+                    <img class="circle" src="./img/gatos.png" alt="">
                     <p>Gatos</p>
                 </div>
+            </div>
+            <div>
             </div>
 
         </div>
 
     </div>
+    <script src="./scripts/main.js" type="module"></script>
 </body>
 </html>

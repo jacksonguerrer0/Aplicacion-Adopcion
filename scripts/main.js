@@ -1,3 +1,7 @@
+
+
+
+
 const URL = window.location.pathname;
 console.log(URL)
 if(URL === '/index.html') {

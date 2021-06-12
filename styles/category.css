@@ -1,31 +1,123 @@
 *{
     font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
     background: #FEC7D7;
 
 }
+.container{  
+    display: flex;
+    flex-flow: wrap column;
+    width: 360px;
+    height: 100vh;
+    margin: auto;
+    background-color: #FEC7D7;
+}
+/* Contenido */
+.content{
+    display: flex;
+    flex-flow: wrap column;
+
+}
+#title{
+    color: #0E172C;
+    font-style: normal;
+    font-weight:800;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 24px;
+}
+#description{
+    color: #0E172C;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 24px;
+    margin-right: 24px;
+
+}
+#categoria{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+}
+#perro{
+    display: flex;
+    flex-flow: row wrap;
+    width: 156px;
+    height: 80px;
+    align-items: center;
+    background-color: #0E172C;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    color: #FFFFFE;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+}
+#gato{
+    display: flex;
+    flex-flow: row wrap;
+    width: 156px;
+    height: 80px;
+    align-items: center;
+    background-color: #0E172C;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    color: #FFFFFE;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+}
+.circle{
+    background-color: #85D1CE;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+/* Nav */
 #fixed{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    background-color: cadetblue;
+    background-color: #FFFFFE;
     position: fixed;
     bottom: 0;
-    width: 375px;
-    height: 50px;
+    width: 360px;
+    height: 72px;
+}
+.activo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    text-decoration: none;
+    color: #85D1CE;
+    background-color: #0E172C;
+    padding: 17px 20px;
+    border-radius: 50px;
+}
+.activoImg{
+    margin-right: 8px;
 }
 
 .contact{
+    display: flex;
+    flex-flow: row wrap;
+    width: 24px;
+    height: 26px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.bodyIconCont{
+    bottom: 10px;
     position: relative;
 }
-
-.container{
-    position: relative;
-    width: 375px;
-    min-height: 100vh;
-    margin: auto;
-
-    background-color: azure;
+.color{
+    color: aqua;
 }

@@ -1,5 +1,6 @@
 *{
     font-family: 'Nunito', sans-serif;
+    color: #0E172C;
 }
 body{
     background-color: #FEC7D7;
@@ -24,28 +25,32 @@ body{
     margin-top: 40px;
 }
 .tittle-waiting{
-    font-weight: 700;
+    font-style: normal;
+    font-weight: bold;
     font-size: 18px;
+    line-height: 25px;
     font-family: 'Nunito', sans-serif;
     width: 327px;
     text-align: center;
 }
 .text-waiting{
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: normal;
+    font-size: 16px;
     font-family: 'Nunito', sans-serif;
     width: 327px;
     text-align: center;
+    line-height: 24px;
 }
 .btn-next-waiting{
-    height: 16px;
+    height: 48px;
     width: 295px;
-    left: 16px;
-    top: 16px;
     background-color: #0E172C;
     text-decoration: none;
     text-align: center;
-    padding: 10px;
+    margin: auto;
+    border-radius: 50px;
+}
+.btn-next-waiting p{
+    align-self: center;
     color: #FFFFFE;
-    border-radius: 20px;
 }
