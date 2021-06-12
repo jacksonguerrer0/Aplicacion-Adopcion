@@ -19,6 +19,9 @@ body, .container{
 }
 #text-cargar{
   color: #0E172C;
+  font-weight: 1000;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
 }
 @keyframes img {
     from {
