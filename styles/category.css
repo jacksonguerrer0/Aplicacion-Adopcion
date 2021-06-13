@@ -45,21 +45,7 @@ body{
     flex-flow: wrap row;
     justify-content: space-evenly;
 }
-.perro{
-    display: flex;
-    flex-flow: row wrap;
-    width: 156px;
-    height: 80px;
-    align-items: center;
-    background-color: #0E172C;
-    justify-content: space-evenly;
-    border-radius: 10px;
-    color: #FFFFFE;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-}
-#gato{
+.divCategoria{
     display: flex;
     flex-flow: row wrap;
     width: 156px;
@@ -123,4 +109,22 @@ body{
 }
 .ocultar{
     background-color: black;
+}
+
+/* Creando tarjetas de perritos */
+#pets{
+    margin: 22px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.card{
+    background-color: aqua;
+    width: 156px;
+    height: 250px;
+}
+.card2{
+    background-color: aqua;
+    width: 156px;
+    height: 250px;
+    margin-top: 24px;
 }
