@@ -21,5 +21,5 @@ category.showCategory();
 divCategoria.addEventListener("click", e =>{
     let idCategoria = category.clickCategoria(e);
     let showPets = category.consultaId(idCategoria);
-    console.log(showPets)
+
 })

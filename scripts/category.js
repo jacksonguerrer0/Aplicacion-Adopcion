@@ -2,6 +2,7 @@ const divCategoria = document.querySelector('#categoria');
 const pets = document.querySelector('#pets');
 
 
+
 export default class Category{
     showCategory(){
     const Url = 'https://my-json-server.typicode.com/hispanos/db-adopcion/categories'
@@ -30,18 +31,68 @@ export default class Category{
         fetch(Url)
         .then(response => response.json())
         .then(data => {
-            let dataFilter =  data.filter((elemento)=>elemento.categoryId === id);
-            console.log(dataFilter)
-            this.pintarPets(dataFilter)
+            let dataFilterPerro =  data.filter((elemento)=>elemento.categoryId === "category-dogs");
+            let dataFilterGato =  data.filter((elemento)=>elemento.categoryId === "category-cats");
+            this.pintarPets(id, dataFilterPerro, dataFilterGato);
         })
     }
-    pintarPets(data){
-        data.forEach(element => {
-            pets.innerHTML += `
-            <p>Nombres ${element.name}</p>
-            <p>Raza ${element.race}</p>` 
-        });
+
+    pintarPets(id, dataPerro, dataGato){
+        if(id === "category-dogs"){
+            let perro = document.querySelector(".cardPerro");
+                dataPerro.forEach(element => {
+                    pets.innerHTML += 
+                    `<div class="card cardPerro"  style="background-image: url(${element.image});">
+                        <div class="cardGrad">
+                            <p class="nombre">${element.name}</p>
+                            <p class="race">${element.race}</p>
+                        </div>
+                    </div>`
+                    if(element.categoryId === "category-dogs"){
+                        perro.style.display = "";
+                        console.log("es perro")
+                    }else if (element.categoryId === "category-cats"){
+                        console.log("es cat")
+                    } 
+                })
+
+        }
+        console.log(id, dataPerro, dataGato)
     }
+            // dataPerro.forEach(element => {
+               
+
+            // });
+        //     if (element.categoryId === "category-dogs") {
+        //         pets.innerHTML += `
+        //         <div class="card cardPerro"  style="background-image: url(${element.image});">
+        //             <div class="cardGrad">
+        //                 <p class="nombre">${element.name}</p>
+        //                 <p class="race">${element.race}</p>
+        //             </div>
+        //         </div>`
+
+        //     } 
+        //     else if (element.categoryId === "category-cats") {
+        //         return 
+        //     }
+
+  
+
+
+    // `   pets.innerHTML += 
+    //             <div class="card cardPerro"  style="background-image: url(${element.image});">
+    //                 <div class="cardGrad">
+    //                     <p class="nombre">${element.name}</p>
+    //                     <p class="race">${element.race}</p>
+    //                 </div>
+    //             </div>`
+
+    //             pets.innerHTML += 
+    //             <div class="card" id="cardGato" style="background-image: url(${element.image});">
+    //                 <div class="cardGrad">
+    //                     <p class="nombre">${element.name}</p>
+    //                     <p class="race">${element.race}</p>
+    //                 </div>
+    //             </div>`
 }
-
-

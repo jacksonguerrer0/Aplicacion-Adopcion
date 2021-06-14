@@ -11,8 +11,7 @@ body{
 .container{  
     display: flex;
     flex-flow: wrap column;
-    width: 360px;
-    height: 100vh;
+    width: 100%;
     margin: auto;
     background-color: #FEC7D7;
 }
@@ -48,7 +47,7 @@ body{
 .divCategoria{
     display: flex;
     flex-flow: row wrap;
-    width: 156px;
+    width: 45%;
     height: 80px;
     align-items: center;
     background-color: #0E172C;
@@ -74,7 +73,7 @@ body{
     background-color: #FFFFFE;
     position: fixed;
     bottom: 0;
-    width: 360px;
+    width: 100%;
     height: 72px;
 }
 .activo{
@@ -113,18 +112,51 @@ body{
 
 /* Creando tarjetas de perritos */
 #pets{
-    margin: 22px;
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px 0;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    justify-content: space-evenly;
 }
 .card{
-    background-color: aqua;
-    width: 156px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 91.270%;
     height: 250px;
+    border-radius: 16px;
+    margin-top: 15px;
+    margin: auto;
+
+
 }
-.card2{
-    background-color: aqua;
-    width: 156px;
+.cardGrad{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26.42%, #000000 99.33%);
+    border-radius: 16px;
     height: 250px;
-    margin-top: 24px;
+    /* para el texto */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+}
+
+.nombre{
+    display: block;
+    margin-left: 20px;
+    font-weight: 700;
+    font-weight: bold;
+}
+.race{
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-weight: normal;
+    
 }
