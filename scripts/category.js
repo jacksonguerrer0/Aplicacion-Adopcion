@@ -45,10 +45,12 @@ export default class Category{
         fetch(Url)
         .then(response => response.json())
         .then(data => {
+            let style = ''
             let dataFilter =  data.filter((elemento)=>elemento.categoryId === "category-dogs");
             dataFilter.forEach(element => {
+                (element.id % 2 === 0)? style ='cardPar': style='cardImpar';
                 pets.innerHTML += 
-                `<div class="card" id="${element.id}" style="background-image: url(${element.image});">
+                `<div class="card ${style}" id="${element.id}" style="background-image: url(${element.image});">
                     <div class="cardGrad">
                         <p class="nombre">${element.name}</p>
                         <p class="race">${element.race}</p>
@@ -60,11 +62,14 @@ export default class Category{
     //Pintar segun el id
     pintarPets(id, dataFilter){
         console.log(id, dataFilter)
+
         if(id === "category-dogs"){ 
             pets.innerHTML=""
-                dataFilter.forEach(element => {
+            let style = ''
+                dataFilter.forEach((element) => {
+                    (element.id % 2 === 0)? style ='cardPar': style='cardImpar';
                     pets.innerHTML += 
-                    `<div class="card" id="${element.id}" style="background-image: url(${element.image});">
+                    `<div class="card ${style}" id="${element.id}" style="background-image: url(${element.image});">
                         <div class="cardGrad">
                             <p class="nombre">${element.name}</p>
                             <p class="race">${element.race}</p>
@@ -73,9 +78,11 @@ export default class Category{
                 })
         }else if (id === "category-cats") {
             pets.innerHTML = ""
+            let style = ''
                 dataFilter.forEach(element => {
+                    (element.id % 2 === 0)? style ='cardPar': style='cardImpar';
                     pets.innerHTML += 
-                    `<div class="card" id="${element.id}"  style="background-image: url(${element.image});">
+                    `<div class="card ${style}" id="${element.id}"  style="background-image: url(${element.image});">
                         <div class="cardGrad">
                             <p class="nombre">${element.name}</p>
                             <p class="race">${element.race}</p>
@@ -87,9 +94,9 @@ export default class Category{
     //Obtener el id de la tarjeta
     idPets(e){
         let idPet = "";
-        if(e.target.className === "card" )idPet = e.target.id;
-        else if(e.target.parentElement.className === "card") idPet = e.target.parentElement.id;
-        else if (e.target.parentElement.parentElement.className === "card") idPet =  e.target.parentElement.parentElement.id;
+        if(e.target.classList[0] === "card" )idPet = e.target.id;
+        else if(e.target.parentElement.classList[0] === "card") idPet = e.target.parentElement.id;
+        else if (e.target.parentElement.parentElement.classList[0] === "card") idPet =  e.target.parentElement.parentElement.id;
         return idPet
     }
     //Pinta el detalle de la mascota
@@ -101,14 +108,54 @@ export default class Category{
         .then(response => response.json())
         .then(data => {
             let dataFilter =  data.filter((elemento)=>elemento.id === idPet);
-            console.log(dataFilter)
+            let genero = "";
+            let agregarPersonalidad = ""
             dataFilter.forEach(element => {
+                (element.gender === "Male")? genero = "masculino.png": genero = "femenino.png";
+                (element.personality[2] === undefined)? agregarPersonalidad = "Juguetón" : agregarPersonalidad= element.personality[2];
                 divDetalle.innerHTML += 
-                `<div class="card" id="${element.id}" style="background-image: url(${element.image});">
-                    <div class="cardGrad">
-                        <p class="nombre">${element.name}</p>
-                        <p class="race">${element.race}</p>
+                `<div class="dFondo" style="background-image: url(${element.image});">
+                <button onclick="location.href='category.html'" class="dDevolver"></button>
+            </div>
+            <div class="dDescription">
+                <div class="dUno">
+                    <h2>${element.name}</h2>
+                    <img class="dImgGenero" src="./img/${genero}" alt="">
+                    <div class="dFavorito"></div>
+                </div>
+                <div class="dDos">
+                    <img src="./img/raza.png" alt="">
+                    <p>${element.race}</p>
+                </div>
+                <div class="dDos">
+                    <img src="./img/edad.png" alt="">
+                    <p>${element.age}</p>
+                </div>
+                <div class="dTres">
+                    <img src="./img/direccion.png" alt="">
+                    <p>${element.address}</p>
+                </div>
+                <h3 class="dH3">Personalidad</h3>
+                <div class="dCuatro">
+                    <div class="dCuatroPersonalidad">
+                        <img class="dCuatroImgPersonalidad" src="./img/${element.personality[0]}.png" alt="">
+                        <p>${element.personality[0]}</p>
                     </div>
+                    <div class="dCuatroPersonalidad">
+                        <img class="dCuatroImgPersonalidad" src="./img/${element.personality[1]}.png" alt="">
+                        <p>${element.personality[1]}</p>
+                    </div>
+                    <div class="dCuatroPersonalidad">
+                        <img class="dCuatroImgPersonalidad" src="./img/${agregarPersonalidad}.png" alt="">
+                        <p >${agregarPersonalidad}</p>
+                    </div>
+                </div>
+                <h3 class="dH3">Historia</h3>
+                <p>${element.feature}</p>
+                <div class="dCinco">
+                    <img class="dImgAutor" src="./img/autor.png" alt="">
+                    <h4>${element.author.name}</h4>
+                    <button class="dContactar">Contactar</button>
                 </div>`
             })
         })

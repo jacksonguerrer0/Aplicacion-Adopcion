@@ -129,8 +129,6 @@ body{
     border-radius: 16px;
     margin-top: 15px;
     margin: auto;
-
-
 }
 .cardGrad{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 26.42%, #000000 99.33%);
@@ -159,4 +157,140 @@ body{
     font-weight: 400;
     font-weight: normal;
     
+}
+/* Agregando margin-top a las tarjetas pares*/
+.cardPar{
+    margin-top: 40px;
+}
+.cardImpar{
+    margin-top: 1px;
+}
+/* Css para detalle */
+.dFondo{
+    background-position: center;
+    background-size: cover;
+    height: 420px;
+}
+.dDevolver{
+    position: relative;
+    background-image: url('/img/devolver.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    left: 20px;
+    top:20px;
+    background-color: #0E172C;
+    border: none;
+    border-radius: 100px;
+}
+.dDescription{
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    top: 60%;
+    padding: 20px;
+    background-color: #FFFFFE;
+    border-radius: 16px 16px 0px 0px;
+}
+.dUno{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.dImgGenero{
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+.dFavorito{
+    background-image: url("../img/favoritoI.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); 
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    position: absolute;
+    right: 27px;
+}
+.dDos{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 15px;
+}
+.dTres{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.dCuatro{
+    display: flex;
+    flex-flow: wrap row;
+    width: 100%;
+    justify-content: space-between;
+}
+.dH3{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.dCuatroPersonalidad{
+    text-align: center;
+    border: 2px solid #A786DF;
+    padding: 15px 5px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: 100px;
+    width: 30%;
+}
+.dCuatroImgPersonalidad{
+    width: 40px;
+}
+.dCuatroParrafPersonalidad{
+    width: 100%;
+
+}
+.dCinco{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 30px;
+    width: 100%;
+    align-items: center;
+}
+.dImgAutor{
+    border: 4px solid #85D1CE;
+    border-radius: 100px;
+    width: 50px;
+    margin-right: 10px;
+}
+.dContactar{
+    background-color:#0E172C;
+    color: #FFFFFE;
+    padding: 5% 8%;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    right: 20px;
+}
+.dDescription p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    
+    letter-spacing: 0.005em;
+    
+    /* Grey */
+    
+    color: #535353;
 }

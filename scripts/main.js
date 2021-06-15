@@ -1,11 +1,14 @@
 import Category from "./category.js"
+import Detalle from "./detalle.js"
 
 //llamo a la clase category
 const category = new Category;
 const divCategoria = document.querySelector('#categoria');
 const pets = document.querySelector('#pets')
 
-
+//llamando a la clase detalle
+const detalle = new Detalle;
+detalle.probando()
 //Pagina de espera
 const URL = window.location.pathname;
 console.log(URL)
@@ -42,7 +45,6 @@ if(URL === "/category.html"){
 
 
 if(URL === "/detalle.html"){
-    console.log(location.search)
     let detalle = ()=>{
         let parametro = new URLSearchParams(location.search)
         let idPet = parseInt(parametro.get("idPets"))
