@@ -167,6 +167,7 @@ export default class Category{
     agregarFavorito(dataFilter){
         const dFavorito = document.querySelector(".dFavorito");
         let Favorito =  JSON.parse(localStorage.getItem("Favoritos"))
+        console.log(!Favorito)
         if(!Favorito || Favorito.length < 1){ Favorito = []}
         dFavorito.addEventListener("click", e=>{
                 dataFilter.forEach(element => {

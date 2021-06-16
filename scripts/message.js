@@ -1,10 +1,8 @@
 const content = document.querySelector(".content");
-let obteniendo = JSON.parse(localStorage.getItem("Favoritos"));
 export default class Message{
     nombre(){
-        
-        content.innerHTML=""
-        obteniendo.forEach((element, index) => {
+        let obteniendo = JSON.parse(localStorage.getItem("Favoritos"));
+        obteniendo.forEach((element) => {
             content.innerHTML = `
             <div class="mHeader">
                 <button onclick="location.href='category.html'" class="dDevolver"></button>
@@ -15,6 +13,7 @@ export default class Message{
                 <input type="text" class="mText">
             </form>`
         })
+
     }
 
 }

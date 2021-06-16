@@ -4,6 +4,7 @@ export default class detalle {
     
     pets.innerHTML=""
     let style = ''
+    console.log(obteniendo)
         obteniendo.forEach((element) => {
             (element % 2 === 0)? style ='cardPar': style='cardImpar';
             pets.innerHTML += 
