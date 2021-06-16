@@ -166,9 +166,9 @@ export default class Category{
     }
     agregarFavorito(dataFilter){
         const dFavorito = document.querySelector(".dFavorito");
-        let Favorito =[]
-
-      dFavorito.addEventListener("click", e=>{
+        let Favorito =  JSON.parse(localStorage.getItem("Favoritos"))
+        if(!Favorito || Favorito.length < 1){ Favorito = []}
+        dFavorito.addEventListener("click", e=>{
                 dataFilter.forEach(element => {
                     let Mascota = {
                         imagen: element.image,
