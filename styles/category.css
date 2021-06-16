@@ -353,4 +353,19 @@ body{
         background-color: #FEC7D7;
         width: 800px;
     }
+    .dDescription{
+        width: 800px;
+    }
+    .dContactar{
+        padding: 3%;
+    }
+    .dDevolver{
+        display: none;
+    }
+    .mText{
+        width: 700px;
+    }
+    .mHeader{
+        width: 700px;
+    }
 }
