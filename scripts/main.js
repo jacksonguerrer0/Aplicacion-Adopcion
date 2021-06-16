@@ -1,14 +1,21 @@
 import Category from "./category.js"
 import Detalle from "./detalle.js"
-
+import Message from "./message.js"
+import profile from "./profile.js"
 //llamo a la clase category
 const category = new Category;
 const divCategoria = document.querySelector('#categoria');
 const pets = document.querySelector('#pets')
 
 //llamando a la clase detalle
-const detalle = new Detalle;
-detalle.probando()
+const cDetalle = new Detalle;
+
+
+//llamando a la clase Message
+const message = new Message;
+
+//llamando a profile
+const profileP = new profile
 //Pagina de espera
 const URL = window.location.pathname;
 console.log(URL)
@@ -50,6 +57,15 @@ if(URL === "/detalle.html"){
         let idPet = parseInt(parametro.get("idPets"))
         let showIdPet = category.showIdPets(idPet)
     }
-    detalle()
+    detalle();
 
+}
+if(URL === "/favorite.html"){
+    cDetalle.probando()
+}
+if(URL === "/message.html"){
+    message.nombre()
+}
+if(URL === "/profile.html"){
+    profileP.guardarPerfil()
 }

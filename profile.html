@@ -17,14 +17,34 @@
     <div class="container">
         <nav id="fixed">
             <a href="category.html" ><img src="./img/Vectori.png"  alt=""></a>
-            <a href="message.html" ><img src="./img/Vector1i.png"  alt=""></a>
+            <a href="#" ><img src="./img/Vector1i.png"  alt=""></a>
             <a href="favorite.html" ><img src="./img/Vector2i.png" alt=""></a>
             <a href="profile.html"class="activo"><img class="activoImg"  src="./img/Vector3a.png" alt="">Perfil</a>
         </nav>
         <div class="content">
-
+            
+            <div class="pContenido">
+                <div class="pHeader">
+                    <h2>Perfil</h2>
+                    <img class="dImgAutor" src="./img/autor.png" alt="">
+                    <h4>Crea tu cuenta</h4>
+                </div>
+                <div class="fProfile" id="formulario">
+                    <label class="pLeft"  for="">Nombre </label>
+                    <input id="nombre" type="text" pattern="[A-Za-z]+" minlength="6" required>
+                    <br>
+                    <label  class="pLeft" for="">Apellido </label>
+                    <input  id="apellido" type="text" pattern="[A-Za-z]+" minlength="6"required>
+                    <br>
+                    <label class="pLeft" for="">Correo </label>
+                    <input id="correo"  type="email"required>
+                    <br>
+                    <button id="guardar">Guardar</button>
+                </div>
+            </div>
         </div>
 
     </div>
+    <script src="./scripts/main.js" type="module"></script>
 </body>
 </html>

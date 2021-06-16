@@ -101,7 +101,6 @@ export default class Category{
     }
     //Pinta el detalle de la mascota
     showIdPets(idPet){
-        console.log(idPet)
         divDetalle.innerHTML=""
         let Url = "https://my-json-server.typicode.com/hispanos/db-adopcion/pets";
         fetch(Url)
@@ -155,9 +154,35 @@ export default class Category{
                 <div class="dCinco">
                     <img class="dImgAutor" src="./img/autor.png" alt="">
                     <h4>${element.author.name}</h4>
-                    <button class="dContactar">Contactar</button>
-                </div>`
+                    <button onclick="location.href='message.html'" class="dContactar">Contactar</button>
+                </div>
+                                        
+            </div>`
+
             })
+            this.agregarFavorito(dataFilter)
         })
+        
     }
+    agregarFavorito(dataFilter){
+        const dFavorito = document.querySelector(".dFavorito");
+        let Favorito =[]
+
+      dFavorito.addEventListener("click", e=>{
+                dataFilter.forEach(element => {
+                    let Mascota = {
+                        imagen: element.image,
+                        nombre: element.name,
+                        raza: element.race,
+                        autor: element.author.name
+                    }
+                    Favorito.push(Mascota);
+                    console.log(Favorito);
+                    this.agregarLocal(Favorito)  
+                });       
+            })
+    }
+    agregarLocal(Favorito){
+        localStorage.setItem("Favoritos", JSON.stringify(Favorito));
+    }   
 }

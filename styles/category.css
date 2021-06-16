@@ -172,7 +172,7 @@ body{
     height: 420px;
 }
 .dDevolver{
-    position: relative;
+    position: absolute;
     background-image: url('/img/devolver.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -293,4 +293,50 @@ body{
     /* Grey */
     
     color: #535353;
+}
+
+
+/* mensaje */
+.mHeader{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-color: #FFFFFE;
+}
+.mForm{
+    display: flex;
+    justify-content: center;
+}
+.mText{
+    position: fixed;
+    bottom: 50px;
+    height: 40px;
+    width: 90%;
+
+}
+.pContenido{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #FEC7D7;
+}
+.pHeader{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+}
+.fProfile{
+    display: grid;
+}
+.pLeft{
+    text-align: left;
 }
