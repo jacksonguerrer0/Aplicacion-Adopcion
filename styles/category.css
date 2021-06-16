@@ -340,3 +340,17 @@ body{
 .pLeft{
     text-align: left;
 }
+.ocultando{
+    opacity: 0.5;
+}
+
+
+@media (min-width: 800px) {
+    .container{
+        width: 800px;
+    }
+    #fixed{
+        background-color: #FEC7D7;
+        width: 800px;
+    }
+}

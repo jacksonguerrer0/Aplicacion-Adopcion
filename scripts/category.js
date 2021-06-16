@@ -11,9 +11,11 @@ export default class Category{
     fetch(Url)
     .then(response => response.json())
     .then(data => {
-    data.forEach(elemento => {
+        let style = ""
+    data.forEach((elemento, index) => {
+        (index === 1)? style = "": style="ocultando";
         divCategoria.innerHTML += 
-        `<div id="${elemento.id}" class="divCategoria">
+        `<div id="${elemento.id}" class="divCategoria ${style}">
             <img class="circle" src="./img/${elemento.image}" alt="">
             <p>${elemento.name}</p>
         </div>`
@@ -154,7 +156,7 @@ export default class Category{
                 <div class="dCinco">
                     <img class="dImgAutor" src="./img/autor.png" alt="">
                     <h4>${element.author.name}</h4>
-                    <button onclick="location.href='message.html'" class="dContactar">Contactar</button>
+                    <button onclick="location.href='profile.html'" class="dContactar">Contactar</button>
                 </div>
                                         
             </div>`
