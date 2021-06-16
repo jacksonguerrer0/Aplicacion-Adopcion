@@ -5,7 +5,7 @@
 Pagina adopcion de gatos y perro, permite ver las mascotas disponibles, su detalle, poder agregar a favoritos, simulacion de login y chat.
 
 
-Puedes verlo aquí: https://jacksonguerrer0.github.io/Aplicacion-Adopcion/index.html
+Puedes verlo aquí: https://jacksonguerrer0.github.io/Aplicacion-Adopcion/waiting-1.html
 
 
 ## 👀  Vista previa
